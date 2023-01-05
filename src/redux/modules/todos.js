@@ -3,13 +3,13 @@ const ADD_TODO = "todos/ADD_TODO";
 const DELETE_TODO = "todos/DELETE_TODO";
 const DONE_TODO = "todos/DONE_TODO";
 
-let idCount = 3;
+let idCount = 3; // id값을 부여하기 위한 변수 선언
 
 export const addTodo = (newTodo) => {
   return {
     type: ADD_TODO,
     todo: {
-      id: idCount++,
+      id: idCount++, // 액션 받은 자료에서 id 추가
       title: newTodo.title,
       body: newTodo.body,
       isDone: newTodo.isDone,

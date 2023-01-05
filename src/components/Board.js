@@ -16,6 +16,7 @@ const Board = () => {
 
   const addtodo = (e) => {
     const newTodo = {
+      //리듀서에 id를 제외한 데이터만 전달
       title: title,
       body: body,
       isDone: false,
