@@ -16,7 +16,6 @@ const Board = () => {
 
   const addtodo = (e) => {
     const newTodo = {
-      id: todos[todos.length - 1].id + 1, // 이 방법도 완벽하지 않음 초기 값이 없을시 리랜더링됨
       title: title,
       body: body,
       isDone: false,

@@ -3,10 +3,17 @@ const ADD_TODO = "todos/ADD_TODO";
 const DELETE_TODO = "todos/DELETE_TODO";
 const DONE_TODO = "todos/DONE_TODO";
 
-export const addTodo = (payload) => {
+let idCount = 3;
+
+export const addTodo = (newTodo) => {
   return {
     type: ADD_TODO,
-    payload,
+    todo: {
+      id: idCount++,
+      title: newTodo.title,
+      body: newTodo.body,
+      isDone: newTodo.isDone,
+    },
   };
 };
 export const deleteTodo = (id) => {
@@ -47,7 +54,7 @@ const todos = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
       // console.log("hi");
-      return { ...state, todos: [...state.todos, action.payload] };
+      return { ...state, todos: [...state.todos, action.todo] };
 
     case DELETE_TODO:
       return {
