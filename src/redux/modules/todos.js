@@ -42,7 +42,7 @@ const initialState = {
 
 // 2.리듀서 만들기
 const todos = (state = initialState, action) => {
-  console.log(action);
+  // console.log(action);
   // 5. 리듀서에서 명령 추가하기
   switch (action.type) {
     case ADD_TODO:
