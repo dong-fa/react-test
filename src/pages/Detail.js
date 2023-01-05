@@ -7,7 +7,7 @@ const Detail = () => {
   const param = useParams();
   const todos = useSelector((state) => state.todos.todos);
   const navigate = useNavigate();
-  const detail = todos.find((detail) => detail.id === parseInt(param.id)); //use param 을 잘 모르는듯.
+  const detail = todos.find((detail) => detail.id === parseInt(param.id));
   const comeBack = () => {
     navigate("/");
   };

@@ -21,6 +21,7 @@ const Board = () => {
       body: body,
       isDone: false,
     };
+    e.preventDefault();
     dispatch(addTodo(newTodo));
     // console.log(todos);
     setTitle("");
